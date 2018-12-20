@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+<h1>Hi there!</h1>
+<img th:src="@{/images/IMG_2139.JPG}" style="width:64px;height:64px"/>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>LAST NAME</th>
+        <th>AGE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${userList}">
+        <td><span th:text="${item.id}"></span></td>
+        <td><span th:text="${item.name}"></span></td>
+        <td><span th:text="${item.lastName}"></span></td>
+        <td><span th:text="${item.age}"></span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
